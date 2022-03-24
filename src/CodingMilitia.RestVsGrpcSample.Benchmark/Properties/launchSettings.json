@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CodingMilitia.RestVsGrpcSample.Benchmark": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

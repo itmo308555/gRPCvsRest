@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option csharp_namespace = "CodingMilitia.RestVsGrpcSample.GrpcService.Generated";
+
+package Hello;
+
+service HelloService {
+    rpc GetHello(HelloRequest) returns (HelloResponse) {}
+    rpc GetMoreComplexHello(ComplexHelloRequest) returns (ComplexHelloResponse) {}
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloResponse {
+    string hello = 1;
+}
+
+message ComplexHelloRequest {
+    string name = 1;
+    repeated HelloRequest simpleHellos = 2;
+    repeated int32 someRandomNumbers = 3;
+}
+
+message ComplexHelloResponse {
+    string hello = 1;
+    repeated HelloResponse simpleHellos = 2;
+    repeated int32 someRandomNumbers = 3;
+}
